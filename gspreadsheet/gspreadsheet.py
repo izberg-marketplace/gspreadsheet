@@ -188,7 +188,7 @@ class GSpreadsheet(object):
         # Get key from url
         if url is not None:
             try:
-                self.key = re.search(r'/d\/([0-9a-zA-Z\-]+)', url).group(1)
+                self.key = re.search(r'/d\/([0-9a-zA-Z\-_]+)', url).group(1)
             except (AttributeError, IndexError):
                 # TODO raise ImproperlyConfigured
                 print "! not a valid url:", url
